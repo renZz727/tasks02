@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Truncate Text</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+      }
+      li {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+        cursor: pointer;
+      }
+
+      .tooltiptext {
+        visibility: hidden;
+        width: 130px;
+        left: 100px;
+        text-align: center;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>List Item</p>
+      <ul style="max-width: 80px" class="tooltip">
+        <li>Apple Cider vinegar<span class="tooltiptext"></span></li>
+        <li>Orange Juice<span class="tooltiptext"></span></li>
+        <li>WaterMelon Shake<span class="tooltiptext"></span></li>
+        <li>Green Apple<span class="tooltiptext"></span></li>
+        <li>Strawberry Shake<span class="tooltiptext"></span></li>
+      </ul>
+    </div>
+    <script>
+      const tooltip = document.querySelector(".tooltip");
+      const tooltiptext = document.querySelector(".tooltiptext");
+
+      tooltip.addEventListener("mouseover", (e) => {
+        tooltiptext.textContent = e.target.textContent;
+      });
+    </script>
+  </body>
+</html>
