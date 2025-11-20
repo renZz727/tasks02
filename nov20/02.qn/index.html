@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="images">
+        <div class="img">
+          <span>1/5</span>
+          <img class="active" src="assets/images/img1.jpeg" alt="" />
+        </div>
+        <div class="img">
+          <span>2/5</span>
+          <img src="assets/images/img4.jpeg" alt="" />
+        </div>
+        <div class="img">
+          <span>3/5</span>
+          <img src="assets/images/img3.jpeg" alt="" />
+        </div>
+        <div class="img">
+          <span>4/5</span>
+          <img src="assets/images/img2.jpeg" alt="" />
+        </div>
+        <div class="img">
+          <span>5/5</span>
+          <img src="assets/images/img5.jpeg" alt="" />
+        </div>
+      </div>
+      <div class="buttons">
+        <button onclick="loadImages(-1)">Prev</button>
+        <button onclick="loadImages(1)">Next</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
