@@ -9,7 +9,6 @@
         display: flex;
         justify-content: center;
         height: 100vh;
-        position: relative;
       }
       .inputField {
         display: flex;
@@ -24,11 +23,14 @@
         justify-content: center;
         padding: 12px;
       }
+      .inputField {
+        position: relative;
+      }
       .count {
         font-size: 24px;
         position: absolute;
         top: 468px;
-        left: 399px;
+        left: 346px;
       }
     </style>
   </head>
@@ -37,8 +39,8 @@
       <div class="inputField">
         <label for="">Input Field:</label>
         <input type="text" />
+        <div class="count"><span>0</span></div>
       </div>
-      <div class="count"><span>0</span></div>
     </div>
     <script>
       const input = document.querySelector("input");
