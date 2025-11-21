@@ -6,7 +6,9 @@
 #sideBar {
   display: none;
   background-color: rgb(27, 31, 27);
-  width: 240px;
+  opacity: 0.9;
+  width: 350px;
+  height: 100vh;
   color: #edecec;
   font-size: 18px;
   border-radius: 0 0 4px 0;
@@ -27,7 +29,7 @@
   background-color: transparent;
   position: relative;
   top: 10px;
-  left: 190px;
+  left: 300px;
   padding: 2px;
 }
 li {
