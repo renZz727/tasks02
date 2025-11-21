@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#sideBar {
+  display: none;
+  background-color: rgb(27, 31, 27);
+  width: 240px;
+  color: #edecec;
+  font-size: 18px;
+  border-radius: 0 0 4px 0;
+}
+.main {
+  position: relative;
+}
+.menu {
+  position: absolute;
+}
+#hamburger {
+  border: none;
+  background-color: transparent;
+  position: relative;
+}
+#cancel {
+  border: none;
+  background-color: transparent;
+  position: relative;
+  top: 10px;
+  left: 190px;
+  padding: 2px;
+}
+li {
+  padding: 12px;
+}
+li:hover {
+  background-color: rgb(162, 97, 223);
+}
+.contents {
+  padding: 10px;
+}
+.sub {
+  padding: 10px 0 0;
+}
+
+.sub-li {
+  display: none;
+  background-color: rgb(48, 48, 79);
+}
+.sub-li li:hover {
+  background-color: rgb(168, 48, 48);
+}

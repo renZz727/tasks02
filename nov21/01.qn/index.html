@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drop Down Menu</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .nav {
+        display: flex;
+        justify-content: center;
+        gap: 44px;
+        background-color: rgb(24, 163, 48);
+        padding: 24px;
+        color: #fff;
+        font-size: 24px;
+      }
+      .menu-item {
+        position: relative;
+      }
+      .dropdown {
+        display: none;
+        position: absolute;
+        top: 25px;
+        left: 0px;
+        width: 200px;
+      }
+      ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        background-color: rgb(202, 244, 194);
+      }
+      li {
+        padding: 16px;
+        color: rgb(116, 91, 173);
+      }
+      li:hover {
+        padding: 16px;
+        color: #fff;
+        background-color: rgb(72, 161, 40);
+      }
+      .menu-item:hover .dropdown {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="menu-item">
+        Fresh Vegetables
+        <ul class="dropdown">
+          <li>Strawberry</li>
+          <li>Apple</li>
+          <li>Orange</li>
+          <li>Grapes</li>
+        </ul>
+      </div>
+
+      <div class="menu-item">
+        Fresh Fruits
+        <ul class="dropdown">
+          <li>Tomato</li>
+          <li>Carrot</li>
+          <li>Potato</li>
+          <li>Brinjal</li>
+          <li>Carrot</li>
+          <li>Potato</li>
+          <li>Brinjal</li>
+          <li>Carrot</li>
+          <li>Potato</li>
+          <li>Brinjal</li>
+        </ul>
+      </div>
+      <div class="menu-item">
+        Dairy, Bread and Eggs
+        <ul class="dropdown">
+          <li>Paneer</li>
+          <li>Yogurt</li>
+          <li>Butter</li>
+          <li>Cheese</li>
+          <li>Butter</li>
+          <li>Cheese</li>
+        </ul>
+      </div>
+      <div class="menu-item">
+        Rice, Atta and Dals
+        <ul class="dropdown">
+          <li>Basmati Rice</li>
+          <li>Jasmine Rice</li>
+          <li>Brown Rice</li>
+          <li>Idi Rice</li>
+          <li>Jasmine Rice</li>
+          <li>Brown Rice</li>
+          <li>Idi Rice</li>
+        </ul>
+      </div>
+      <div class="menu-item">
+        Munchies
+        <ul class="dropdown">
+          <li>Popcorn</li>
+          <li>Potato Chips</li>
+          <li>puffed rice cakes</li>
+          <li>Dried fruits</li>
+          <li>Potato Chips</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
