@@ -4,37 +4,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Image Slider</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="images">
-        <div class="img">
-          <span>1/5</span>
-          <img class="active" src="assets/images/img1.jpeg" alt="" />
+    <h1>WELCOME TO THE SHOW</h1>
+    <div class="outer">
+      <div class="container">
+        <div class="images">
+          <div class="img">
+            <span>1/6</span>
+            <img class="active" src="assets/images/car1.jpg" alt="" />
+          </div>
+          <div class="img">
+            <span>2/6</span>
+            <img src="assets/images/car2" alt="" />
+          </div>
+          <div class="img">
+            <span>3/6</span>
+            <img src="assets/images/car3.jpg" alt="" />
+          </div>
+          <div class="img">
+            <span>4/6</span>
+            <img src="assets/images/car4.jpg" alt="" />
+          </div>
+          <div class="img">
+            <span>5/6</span>
+            <img src="assets/images/car5.jpg" alt="" />
+          </div>
+          <div class="img">
+            <span>6/6</span>
+            <img src="assets/images/car6.jpg" alt="" />
+          </div>
         </div>
-        <div class="img">
-          <span>2/5</span>
-          <img src="assets/images/img4.jpeg" alt="" />
-        </div>
-        <div class="img">
-          <span>3/5</span>
-          <img src="assets/images/img3.jpeg" alt="" />
-        </div>
-        <div class="img">
-          <span>4/5</span>
-          <img src="assets/images/img2.jpeg" alt="" />
-        </div>
-        <div class="img">
-          <span>5/5</span>
-          <img src="assets/images/img5.jpeg" alt="" />
-        </div>
-      </div>
-      <div class="buttons">
-        <button onclick="loadImages(-1)">Prev</button>
-        <button onclick="loadImages(1)">Next</button>
       </div>
     </div>
-    <script src="script.js"></script>
+    <div class="buttons">
+      <button onclick="loadImages(-1)">Prev</button>
+      <button onclick="loadImages(1)">Next</button>
+    </div>
+    <script>
+      const images = document.querySelectorAll(".img");
+      const container = document.querySelector(".container");
+      let index = 0;
+      function loadImages(flow) {
+        if (flow === -1) {
+          if (index === 0) index = images.length - 1;
+          index--;
+        } else if (index === images.length - 1) index = 0;
+        else index++;
+        for (const image of images) {
+          image.style.scrollSnapAlign = "none";
+        }
+        images[index].scrollIntoView({
+          behavior: "smooth",
+        });
+        images[index].style.scrollSnapAlign = "center";
+      }
+
+      let timer = setInterval(() => {
+        loadImages(1);
+      }, 3000);
+
+      container.addEventListener("mouseover", () => {
+        clearInterval(timer);
+      });
+      container.addEventListener("mouseout", () => {
+        timer = setInterval(() => {
+          loadImages(1);
+        }, 3000);
+      });
+    </script>
   </body>
 </html>

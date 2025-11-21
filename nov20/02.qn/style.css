@@ -1,27 +1,46 @@
+body {
+  background: url("assets/images/back.jpg");
+  background-position: center;
+}
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 58px;
+}
+.outer {
+  background: transparent;
+}
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 700px;
+  width: 600px;
   margin: auto;
 }
 .buttons {
   display: flex;
   justify-content: center;
+  margin-top: 12px;
   align-items: center;
+  gap: 30px;
 }
 .images {
   width: 600px;
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
 }
 .img {
   position: relative;
+  width: 600px;
 }
 img {
   object-fit: fill;
-  width: 100%;
+  width: 800px;
   height: 400px;
-  display: none;
+  flex: 1;
 }
 span {
   position: absolute;
@@ -30,6 +49,7 @@ span {
   color: #fff;
   font-size: 24px;
 }
-.active {
-  display: block;
+button {
+  padding: 12px;
+  border-radius: 50%;
 }
