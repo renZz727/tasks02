@@ -1,4 +1,7 @@
-export function mergeIds(arr : Record<string, unknown>[]) : Record<string, unknown>[]{
+const objectKeys = ["id", "value"] as const;
+// const objectKeyType = typeof objectKeys[number]
+export function mergeIds(arr : Record<keyof typeof objectKeys[number], unknown>[]) : Record<string, unknown>[]{
+
   const map = {};
   const result = [];
 
