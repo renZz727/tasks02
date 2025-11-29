@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" />
+      <p>
+        1. Write a function AnalyzeHeatmap(heatmap) that takes a 2D array of
+        temperature readings and returns an object with: - maxTemp, minTemp,
+        averageTemp - coordinates of the hottest and coldest points. Input:
+        [[30,32,35],[28,40,33],[31,36,38]] Output: { maxTemp: 40, minTemp: 28,
+        averageTemp: 33.7, hottestPoint: [1,1], coldestPoint: [1,0] } 2. Write a
+        function that filters out expired items. It takes an array of objects,
+        each with data and an expires-at value in milliseconds. Sample input:
+        [{value: "data", expiresAt: 1764385871929}] 3. Convert file size in
+        bytes to human readable text. Input: 1500 Output: "1.46 KB"
+      </p>
+    </div>
+    <script>
+      const input = document.querySelector("input");
+      const text = document.querySelector("p");
+      const words = text.textContent.split(" ");
+
+      input.addEventListener("input", () => {
+        words.forEach((word, index) => {
+          if (
+            word.startsWith(input.value.trim()) ||
+            word === input.value.trim()
+          ) {
+            render(index);
+          }
+        });
+      });
+      function render(index) {
+        text.textContent = "";
+        for (let i = 0; i < words.length; i++) {
+          const span = document.createElement("span");
+          span.textContent = ` ${words[i]} `;
+          if (i === index) {
+            console.log(i, index);
+            span.style.color = "orange";
+            span.style.backgroundColor = "blue";
+          }
+          text.appendChild(span);
+        }
+      }
+      render(2);
+    </script>
+  </body>
+</html>
